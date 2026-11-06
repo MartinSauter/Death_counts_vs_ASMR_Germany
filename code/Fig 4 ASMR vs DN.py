@@ -30,7 +30,7 @@ def lr(x,y,start_lr,stop_lr):
 
 ###########################################
 
-df_a=pd.read_csv("../data_proc/cmr/asmr_5.csv",delimiter=";",
+df_a=pd.read_csv("../data_proc/cmr/asmr_5_85.csv",delimiter=";",
                index_col=0)
 
 #starting with 2011      
@@ -181,10 +181,10 @@ frame.set_edgecolor("white")
 
 plt.gca().add_artist(leg1)
 
-plt.savefig("../figures/Fig 4 asmr dn trends",dpi=1000)
+# plt.savefig("../figures/Fig 4 asmr dn trends",dpi=1000)
 
-plt.savefig("../figures/Fig 4 asmr dn trends.pdf",
-            bbox_inches='tight')
+# plt.savefig("../figures/Fig 4 asmr dn trends.pdf",
+#             bbox_inches='tight')
             
 
 

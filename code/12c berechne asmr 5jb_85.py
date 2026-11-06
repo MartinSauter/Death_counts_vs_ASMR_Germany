@@ -41,25 +41,25 @@ def lr_fit(years,data,imin,imax):
 
 
 
-cmr=pd.read_csv("../data_proc/cmr/agg_5_80p.csv",sep=";",index_col=0)
+cmr=pd.read_csv("../data_proc/cmr/agg_5.csv",sep=";",index_col=0)
                 
 cmr.columns = cmr.columns.astype(int)
 
 
 
-std_deu=pd.read_csv("../std_pops/deu20/deu20_5_80.csv",delimiter=";",
+std_deu=pd.read_csv("../std_pops/deu20/deu20_5.csv",delimiter=";",
                 header=None)
 
-std_esp=pd.read_csv("../std_pops/esp13/esp13_5_80.csv",delimiter=";",
+std_esp=pd.read_csv("../std_pops/esp13/esp13_5_85.csv",delimiter=";",
                 header=None)
 
-std_who=pd.read_csv("../std_pops/who15/who15_5.csv",delimiter=";",
+std_who=pd.read_csv("../std_pops/who15/who15_5_85.csv",delimiter=";",
                 header=None)
 ###########################################################
 
 for year in cmr.keys():
     # Spalte als Wert, Zeile als index über umweg referenziert
-    c=cmr.loc[cmr.index[0:17],year]
+    c=cmr.loc[cmr.index[0:18],year]
     # a_d=np.dot(c,std_deu)
     
     cmr.loc["asmr_de",year]=np.dot(c,std_deu)
@@ -76,5 +76,7 @@ for year in cmr.keys():
     cmr.loc["psc_who"]=cmr.loc["asmr_who"]/cmr.loc["asmr_who_fit"]-1
 
     
-cmr.to_csv("../data_proc/cmr/asmr_5_80.csv",sep=";")
+
+
+cmr.to_csv("../data_proc/cmr/asmr_5_85.csv",sep=";")
 
