@@ -1,25 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jan 27 13:51:19 2023
-
-@author: Martin Sauter
+Generatin Tab. 2 in Paper
+Comparison of ASMR-p-scores
+for stp. pops DE20, ESP13, WHO
 """
 
 
 
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import matplotlib.patches as patches
-# from matplotlib.ticker import FuncFormatter
 import pandas as pd
-
-
-
 
 
 ###########################################
 
-df=pd.read_csv("../data_proc/cmr/asmr_5.csv",delimiter=";",
+df=pd.read_csv("../data_proc/cmr/asmr_5_85.csv",delimiter=";",
                index_col=0)
                
 
@@ -67,7 +60,7 @@ print(f"{min(p_esp[3:9]):>12.2%}",end="")
 print(f"{max(p_esp[3:9]):>12.2%}",end="")          
 print("")
 ######################################################
-print(f"{'P-score WHO15':<12}",end="")
+print(f"{'P-score WHO':<12}",end="")
      
 for jahr in [-5,-4,-3,-2]:
         
@@ -78,3 +71,13 @@ for jahr in [-5,-4,-3,-2]:
 print(f"{min(p_who[3:9]):>12.2%}",end="")
 print(f"{max(p_who[3:9]):>12.2%}",end="")          
 print("")
+
+"""
+Result (Copy & Paste from Output):
+    
+       Year        2020        2021        2022        2023        min.        max.
+P-score DE20        2.24%       4.74%       7.98%       3.41%      -2.68%       1.83%
+P-score ESP13       2.26%       4.82%       7.95%       3.27%      -2.69%       1.73%
+P-score WHO        1.81%       5.39%       7.93%       3.86%      -2.54%       1.64%
+
+"""

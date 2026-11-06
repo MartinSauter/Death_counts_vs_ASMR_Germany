@@ -70,7 +70,7 @@ gruppen5 = pd.cut(
 
 df_agg_5 = pop.groupby(gruppen5,observed=False).sum()
 
-df_agg_5.to_csv("../data_proc/pop/agg_5.csv",sep=";")
+df_agg_5.to_csv("../data_proc/pop/agg_5_85.csv",sep=";")
 
 
 #####################################################
@@ -84,4 +84,4 @@ gruppen5_80p = pd.cut(
 
 df_agg_5_80p = pop.groupby(gruppen5_80p,observed=False).sum()
 
-df_agg_5_80p.to_csv("../data_proc/pop/agg_5_80p.csv",sep=";")
+df_agg_5_80p.to_csv("../data_proc/pop/agg_5_80.csv",sep=";")

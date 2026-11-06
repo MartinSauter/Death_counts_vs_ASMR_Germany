@@ -1,35 +1,21 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec 31 15:06:50 2025
 
-@author: Martin Sauter
+Reading CMR from file;
+Multiplication with std_pos
+rewrite into df
+add linear fit 
+add p-score
+save to file
 """
+
 
 import pandas as pd
 import numpy as np
 from scipy.stats import linregress
-from matplotlib import pyplot as plt
-from matplotlib.ticker import FuncFormatter
-from cycler import cycler
+
 ####################################################
 
-plt.style.use("classic")
-plt.rcParams['font.family'] = 'Arial'
-plt.rcParams['font.size']=13
-plt.rcParams['axes.prop_cycle'] = cycler('color',
-                                          plt.get_cmap('tab10',7).colors)
-
-#########################################################
-# def int_func(value, tick_number):
-#     return f'{value:,.0f}'.replace(',', ' ')  
-#     # Umständlich Tausendertrennzeichen, ohne Dezimalstellen
-    
-# def small_int_func(value, tick_number):
-#     return f'{value:,.0f}'.replace(',', '')  
-#     # Umständlich Tausendertrennzeichen, ohne Dezimalstellen
-
-# def proc_func(value, tick_number):
-#     return f'{value:.3%}'.replace(',', ' ')
    
 
 def lr_fit(years,data,imin,imax):
@@ -77,13 +63,3 @@ for year in cmr.keys():
 
     
 cmr.to_csv("../data_proc/cmr/asmr_10.csv",sep=";")
-# plt.plot(cmr.keys(),cmr.loc["asmr",:],ls="",marker="x")
-
-# years=cmr.keys()
-# f1=lr_fit(years,cmr.loc["asmr",:],2,9)
-
-# cmr.loc["asmr_fit"]=f1
-
-# cmr.loc["psc"]=cmr.loc["asmr"]/cmr.loc["asmr_fit"]-1
-
-# plt.plot(cmr.keys(),cmr.loc["asmr_fit",:],ls="-",marker="")

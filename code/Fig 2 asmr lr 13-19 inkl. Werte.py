@@ -44,7 +44,7 @@ def add_arrow(idx,j,a,a_fit,ax):
 
 ###########################################
 
-df=pd.read_csv("../data_proc/cmr/asmr_5.csv",delimiter=";",
+df=pd.read_csv("../data_proc/cmr/asmr_5_85.csv",delimiter=";",
                index_col=0)
                
 
@@ -117,8 +117,8 @@ plt.tight_layout()
 
 
 
-plt.savefig("../figures/Fig 2 asmr de_5y_85p.png",dpi=1000)
+# plt.savefig("../figures/Fig 2 asmr de_5y_85p.png",dpi=1000)
 
-plt.savefig("../figures/Fig 2 asmr de_5y_85p fit.pdf",
-            bbox_inches='tight')
+# plt.savefig("../figures/Fig 2 asmr de_5y_85p fit.pdf",
+#             bbox_inches='tight')
             

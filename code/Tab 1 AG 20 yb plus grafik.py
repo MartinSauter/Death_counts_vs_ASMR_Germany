@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri May 20 22:18:38 2022
+Generating Tab. 1 in Paper
+Lin. Regression over 20y age groups
 
-@author: Martin Sauter
 """
 
 
@@ -58,7 +58,7 @@ k=0
 # with open("ausgabe.txt","w") as file:
 #        print()
 
-fname="Tab.1 Data CDC Trend 13-19 20y age groups.txt"
+fname="Tab 1 Data CDC Trend 13-19 20y age groups.txt"
 with open(fname, "w"):
     pass
    
@@ -202,7 +202,16 @@ plt.tight_layout()
 
 fig.delaxes(ax[2,1])
 
-# plt.savefig("../figures/Fig xx ÜS AG 13-19 20 gruppen.png",dpi=1000)
+"""
+Output (copy and paste)
 
-# plt.savefig("../figures/Fig xx  ÜS AG 13-19 20 gruppen.tif",dpi=600,
-#             pil_kwargs={"compression": "tiff_lzw"})
+                    2020                    2021                    2022                    2023          
+Age group           abs.        rel.        abs.        rel.        abs.        rel.        abs.        rel.        min.        max.
+0-19                -522     -11.29%        -409      -8.77%        -322      -6.84%        -389      -8.19%      -4.05%       7.65%
+20-39                -71      -0.73%          41       0.42%         388       3.95%         -51      -0.52%      -2.92%       3.61%
+40-59                168       0.23%        3763       5.25%        1717       2.43%       -1029      -1.48%      -1.81%       1.43%
+60-79              -1716      -0.53%       10219       3.18%       15277       4.76%        9378       2.93%      -2.14%       1.97%
+80+                24553       4.43%       35583       6.28%       63463      10.94%       23154       3.91%      -3.77%       2.22%
+
+"""
+

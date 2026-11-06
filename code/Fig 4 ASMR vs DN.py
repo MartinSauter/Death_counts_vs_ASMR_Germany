@@ -181,10 +181,10 @@ frame.set_edgecolor("white")
 
 plt.gca().add_artist(leg1)
 
-# plt.savefig("../figures/Fig 4 asmr dn trends",dpi=1000)
+plt.savefig("../figures/Fig 4 asmr dn trends",dpi=1000)
 
-# plt.savefig("../figures/Fig 4 asmr dn trends.pdf",
-#             bbox_inches='tight')
+plt.savefig("../figures/Fig 4 asmr dn trends.pdf",
+            bbox_inches='tight')
             
 
 

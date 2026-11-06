@@ -8,7 +8,7 @@ Created on Thu Oct 29 18:56:01 2026
 import pandas as pd
 import numpy as np
 
-df=pd.read_csv("../data_proc/pop/agg_5.csv",sep=";")
+df=pd.read_csv("../data_proc/pop/agg_5_85.csv",sep=";")
 
 
 pop=df["2020"].values
@@ -53,7 +53,7 @@ print("10y-bands")
 print(de20_10)
 
 np.savetxt("../std_pops/deu20/deu20_10.csv",de20_10)
-np.savetxt("../std_pops/deu20/deu20_5.csv",de20_5)
+np.savetxt("../std_pops/deu20/deu20_5_85.csv",de20_5)
 
 #  generate array with 80+ open ended group
 

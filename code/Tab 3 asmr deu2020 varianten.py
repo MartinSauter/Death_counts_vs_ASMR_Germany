@@ -19,7 +19,7 @@ import pandas as pd
 
 ###########################################
 
-df=pd.read_csv("../data_proc/cmr/asmr_5.csv",delimiter=";",
+df=pd.read_csv("../data_proc/cmr/asmr_5_85.csv",delimiter=";",
                index_col=0)
                
 
@@ -91,3 +91,13 @@ print(f"{min(p_de_10_80[3:9]):>12.2%}",end="")
 print(f"{max(p_de_10_80[3:9]):>12.2%}",end="")
 
 print("")
+
+
+""" 
+Results (Copy & paste from output):
+        Year                  2020        2021        2022        2023        min.        max.
+P-score DE2020,  5y, 85+        2.24%       4.74%       7.98%       3.41%      -2.68%       1.83%
+P-score DE2020,  5y, 80+        1.82%       4.83%       8.97%       5.78%      -2.56%       2.34%
+P-score DE2020, 10y, 80+        1.09%       3.39%       6.78%       3.25%      -2.62%       2.34%
+    
+"""

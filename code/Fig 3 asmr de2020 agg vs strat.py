@@ -20,7 +20,7 @@ def lr():
     return a_80_84
 ###########################################
 
-df=pd.read_csv("../data_proc/cmr/asmr_5.csv",delimiter=";",
+df=pd.read_csv("../data_proc/cmr/asmr_5_85.csv",delimiter=";",
                index_col=0)
                
 j=df.keys().astype(int).to_numpy()
@@ -103,10 +103,10 @@ plt.legend(loc="upper right")
 
 
 
-plt.savefig("../figures/Fig 3 asmr de_5y_varianten.png",dpi=1000)
+# plt.savefig("../figures/Fig 3 asmr de_5y_varianten.png",dpi=1000)
 
-plt.savefig("../figures/Fig 3 asmr de_5y_varianten.pdf",
-            bbox_inches='tight')
+# plt.savefig("../figures/Fig 3 asmr de_5y_varianten.pdf",
+#             bbox_inches='tight')
             
 
 

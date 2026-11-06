@@ -8,29 +8,8 @@ Created on Wed Dec 31 15:06:50 2025
 import pandas as pd
 import numpy as np
 from scipy.stats import linregress
-from matplotlib import pyplot as plt
-from matplotlib.ticker import FuncFormatter
-from cycler import cycler
-####################################################
 
-plt.style.use("classic")
-plt.rcParams['font.family'] = 'Arial'
-plt.rcParams['font.size']=13
-plt.rcParams['axes.prop_cycle'] = cycler('color',
-                                          plt.get_cmap('tab10',7).colors)
 
-#########################################################
-# def int_func(value, tick_number):
-#     return f'{value:,.0f}'.replace(',', ' ')  
-#     # Umständlich Tausendertrennzeichen, ohne Dezimalstellen
-    
-# def small_int_func(value, tick_number):
-#     return f'{value:,.0f}'.replace(',', '')  
-#     # Umständlich Tausendertrennzeichen, ohne Dezimalstellen
-
-# def proc_func(value, tick_number):
-#     return f'{value:.3%}'.replace(',', ' ')
-   
 
 def lr_fit(years,data,imin,imax):
     fit_p=linregress(years[imin:imax],data[imin:imax])
@@ -41,13 +20,13 @@ def lr_fit(years,data,imin,imax):
 
 
 
-cmr=pd.read_csv("../data_proc/cmr/agg_5.csv",sep=";",index_col=0)
+cmr=pd.read_csv("../data_proc/cmr/agg_5_85.csv",sep=";",index_col=0)
                 
 cmr.columns = cmr.columns.astype(int)
 
 
 
-std_deu=pd.read_csv("../std_pops/deu20/deu20_5.csv",delimiter=";",
+std_deu=pd.read_csv("../std_pops/deu20/deu20_5_85.csv",delimiter=";",
                 header=None)
 
 std_esp=pd.read_csv("../std_pops/esp13/esp13_5_85.csv",delimiter=";",
